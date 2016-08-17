@@ -1,10 +1,10 @@
 {
-  "appName": {
-    "message": "openscholar",
-    "description": "The name of the application"
-  },
-  "appDescription": {
-    "message": "Open Scholar",
-    "description": "The description of the application"
-  }
+   "appDescription": {
+      "description": "The description of the application",
+      "message": "Open Scholar"
+   },
+   "appName": {
+      "description": "The name of the application",
+      "message": "openscholar"
+   }
 }

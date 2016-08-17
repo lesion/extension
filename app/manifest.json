@@ -1,46 +1,32 @@
 {
-    "name": "Scholar Ninja",
-    "version": "0.0.17",
-    "manifest_version": 2,
-    "description": "An open distributed search engine for science",
-    "icons": {
-        "16": "images/icon-16.png",
-        "48": "images/icon-48.png",
-        "128": "images/icon-128.png"
-    },
-    "default_locale": "en",
-    "background": {
-        "scripts": [
-            "scripts/vendor/lodash.js",
-            "scripts/vendor/sha256.js",
-            "scripts/vendor/peer.js",
-            "scripts/vendor/webrtc-chord.js",
-            "scripts/browserified/background.js"
-        ]
-    },
-    "browser_action": {
-        "default_icon": {
-            "19": "images/icon-19.png",
-            "38": "images/icon-38.png"
-        },
-        "default_title": "Scholar Ninja",
-        "default_popup": "popup.html"
-    },
-    "content_scripts": [
-        {
-            "matches": [
-                "<all_urls>"
-            ],
-            "js": [
-                "scripts/browserified/content.js"
-            ]
-        }
-    ],
-    "permissions": [
-        "unlimitedStorage",
-        "storage",
-        "tabs",
-        "http://*/*",
-        "https://*/*"
-    ]
+   "background": {
+      "scripts": [ "scripts/chromereload.js", "scripts/vendor/lodash.js", "scripts/vendor/sha256.js", "scripts/vendor/peer.js", "scripts/vendor/webrtc-chord.js", "scripts/browserified/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/icon-19.png",
+         "38": "images/icon-38.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Scholar Ninja"
+   },
+   "content_scripts": [ {
+      "css": [ "styles/content.css" ],
+      "js": [ "scripts/vendor/jquery.js", "scripts/vendor/unslider.js", "scripts/browserified/content.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "default_locale": "en",
+   "description": "An open distributed search engine for science",
+   "icons": {
+      "128": "images/icon-128.png",
+      "16": "images/icon-16.png",
+      "48": "images/icon-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhJa3gCWWzG6abTFIki/VEhO+n1KUDNooNSM3YgCUA+GZ26qH6PihJUSoaMl2ct+6XnFHGEObUhXjAmgU6dH0Wpv4g0xYlOqBNJJsS6IlwzRxqmWO1HZ8xwktVOMzt8fMd4uhHXSqUzXVGC1h1K8wRtYoJpxOtniBimzIjgKdaBNJnYGDCU7il2qWa0NK5ZpT5qcFafg4pFWOC6ZLi7EuPNScJBVaH+Ln0XocF2c5noLmGntkYiJEaQ1g3q4r17WW0Lf3hWFSFp2ygjtwf/NwFEcfStDZtffua5XYp9xNYqXPqF/51Rc+tv48LV6fxSgHELdFJv9rj36nNT6H1WgNLQIDAQAB",
+   "manifest_version": 2,
+   "name": "Scholar Ninja",
+   "permissions": [ "unlimitedStorage", "storage", "tabs", "http://*/*", "https://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.19",
+   "web_accessible_resources": [ "images/*.png", "images/*.svg" ]
 }
